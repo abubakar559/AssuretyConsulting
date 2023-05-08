@@ -10,7 +10,8 @@ from pathlib import Path
 import pickle
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
-
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.alert import Alert
 
 
 
@@ -20,6 +21,7 @@ class Instagram(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
         self.driver.get('http://aims.assuretyconsulting.com/AIMSPlus/Default.aspx')
+
         self.driver.maximize_window()
 
     def login(self):
@@ -40,39 +42,19 @@ class Instagram(unittest.TestCase):
         time.sleep(10)
         #login steps till now 
 
+
+
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_gdvwJobs_ctl02_lblhdrJobNameTitleAndIssue"]').click()
         time.sleep(5)
         #selecting first job 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
         time.sleep(5) #left menu Modify     
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_content_lnkBtnManageCSM"]').click()
-        time.sleep(5)   #ManageCSM selection 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbSelectAllContainers"]').click()
-        time.sleep(5) #SelectAllContainers
 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbTransportManag"]').click()
-        time.sleep(5) #transport Selected 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_content_lbSyncJobReport"]').click()
+        time.sleep(2) #Selection Re-CalcuPieces 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ibtxtScheduledInHomeDate"]').click()
-        time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtScheduledInHomeDate_CalendarExtender_today"]').click()
-        time.sleep(2) #Scheduled In-Home Date
-        
-
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ibtxtPostageStatementMailingDate"]').click()
-        time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtPostageStatementMailingDate_CalendarExtender_today"]').click()
-        time.sleep(2) #Postage Statement Mailing Date
-
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ibtxtScheduledShipDate"]').click()
-        time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtScheduledShipDate_CalendarExtender_today"]').click()
-        time.sleep(2)
-
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_btnSave"]').click()
-        time.sleep(2)
-
-
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_imgBtnAutoCorrect"]').click()
+        time.sleep(5)
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
         time.sleep(5) #close modify drop down menu
@@ -83,6 +65,21 @@ class Instagram(unittest.TestCase):
 
 
         
+        a = ActionChains(driver)
+        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
+        a.move_to_element(m).perform() 
+        time.sleep(1)       
+
+
+        a = ActionChains(driver)
+        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]')
+        a.move_to_element(m).perform()
+        
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]').click() 
+        time.sleep(10) #log out step   
+
+
 
 
     def tearDown(self):

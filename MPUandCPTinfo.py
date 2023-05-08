@@ -21,6 +21,7 @@ class Instagram(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
         self.driver.get('http://aims.assuretyconsulting.com/AIMSPlus/Default.aspx')
+        self.driver.maximize_window()
 
     def login(self):
         pass
