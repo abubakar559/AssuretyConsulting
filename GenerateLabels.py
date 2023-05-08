@@ -47,21 +47,27 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_gdvwJobs_ctl02_lblhdrJobNameTitleAndIssue"]').click()
         time.sleep(5)
         #selecting first job 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
-        time.sleep(5) #left menu Modify     
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane4_header"]').click()
+        time.sleep(5) #left menu Generate     
 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_content_lbSyncJobReport"]').click()
-        time.sleep(2) #Selection Re-CalcuPieces 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane4_content_lbGenerateLabels"]').click()
+        time.sleep(2) #Labels selection
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_chkGenerateLabelforIMtB"]').click()
+        time.sleep(2) #check box first 
+        
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_chkGenerateLabelforIMcB"]').click()
+        time.sleep(2) #check box second 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_imgBtnAutoCorrect"]').click()
-        time.sleep(5) #re-calculate count btn  
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_btnPrintLables"]').click()
+        time.sleep(5) #Generate Button 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
-        time.sleep(5) #close modify drop down menu
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_header"]').click()
-        time.sleep(5) #open export menu drop down 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_content_trPostalOneExport"]/td').click()
-        time.sleep(10) #selecting Postal One! 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
+        # time.sleep(5) #close modify drop down menu
+        # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_header"]').click()
+        # time.sleep(5) #open export menu drop down 
+        # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_content_trPostalOneExport"]/td').click()
+        # time.sleep(10) #selecting Postal One! 
 
 
         
@@ -77,7 +83,7 @@ class Instagram(unittest.TestCase):
         
         time.sleep(2)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]').click() 
-        time.sleep(10) #log out step   
+        time.sleep(5) #log out step   
 
 
 
