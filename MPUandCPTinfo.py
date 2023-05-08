@@ -85,6 +85,7 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtPeriodicalIssueDate_CalendarExtender_today"]').click()
         time.sleep(2) #Periodical Issue Date
 
+        
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlCCR"]').click()
         time.sleep(1)
