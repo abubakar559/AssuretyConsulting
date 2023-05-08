@@ -125,10 +125,10 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlMailOwnersLclPermitRefNumOrIntlBillNumTypeMPAID"]').click()
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlMailOwnersLclPermitRefNumOrIntlBillNumTypeMPAID"]/option[4]').click()
-        time.sleep(2)
+        time.sleep(2) 
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_btnAdd"]').click()
-        time.sleep(2)
+        time.sleep(2) #Add button 
 
         #driver.find_element_by_xpath('').click()
 
