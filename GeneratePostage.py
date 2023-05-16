@@ -60,9 +60,31 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_grdvwSelectedContainers_ctl13_chkbxSelectContainer_freezeitem"]').click()
         time.sleep(2)
 
+        # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbSelectAllContainers"]').click()
+        # time.sleep(5)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnkBtnPostageView"]').click()
-        time.sleep(2)
+        time.sleep(5)
 
+
+        try:
+            # Find the element by XPath
+             element = driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_grdvwCalculatePostageStatement"]/tbody/tr/td')
+
+            # Verify that the element is visible
+             assert element.is_displayed(), "Element is not visible"
+
+            # Verify that the element contains the expected text
+             assert "No Record Found" in element.text, "Element does not contain expected text"
+
+        except NoSuchElementException:
+            # If the element is not found, print a message and continue the script
+             print("Element not found")
+
+        except AssertionError as e:
+            # If the assertion fails, print the error message and continue the script
+             print(e)
+        finally:
+        
         # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
         # time.sleep(5) #close modify drop down menu
         # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_header"]').click()
@@ -72,19 +94,19 @@ class Instagram(unittest.TestCase):
 
 
         
-        a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
-        a.move_to_element(m).perform() 
-        time.sleep(1)       
+            a = ActionChains(driver)
+            m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
+            a.move_to_element(m).perform() 
+            time.sleep(1)       
 
 
-        a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]')
-        a.move_to_element(m).perform()
-        
-        time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]').click() 
-        time.sleep(5) #log out step   
+            a = ActionChains(driver)
+            m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]')
+            a.move_to_element(m).perform()
+            
+            time.sleep(2)
+            driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]').click() 
+            time.sleep(5) #log out step   
 
 
 

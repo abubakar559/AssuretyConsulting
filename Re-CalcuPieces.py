@@ -44,7 +44,7 @@ class Instagram(unittest.TestCase):
 
 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_gdvwJobs_ctl02_lblhdrJobNameTitleAndIssue"]').click()
+        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_gdvwJobs_ctl03_lblhdrJobNameTitleAndIssue"]').click()
         time.sleep(5)
         #selecting first job 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
@@ -56,6 +56,20 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_imgBtnAutoCorrect"]').click()
         time.sleep(5) #re-calculate count btn  
 
+
+        try:
+            
+            element = driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnKbtnUpdateWeights"]')
+
+            # Fixing error 
+            element.click()
+
+        except NoSuchElementException:
+            
+            print("Element not found. Continuing with the ongoing script...")
+
+             
+        time.sleep(5)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
         time.sleep(5) #close modify drop down menu
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_header"]').click()

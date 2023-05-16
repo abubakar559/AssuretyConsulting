@@ -590,6 +590,21 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_imgBtnAutoCorrect"]').click()
         time.sleep(5) #re-calculate count btn 
 
+        try:
+            
+            element = driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnKbtnUpdateWeights"]')
+
+            # Fixing error 
+            element.click()
+
+        except NoSuchElementException:
+            
+            print("Element not found. Continuing with the ongoing script...")
+
+             
+        time.sleep(5)
+
+
         #Re-Calcu done next Generate Labels
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
