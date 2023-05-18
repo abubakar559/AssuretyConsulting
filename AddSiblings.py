@@ -91,18 +91,18 @@ class Instagram(unittest.TestCase):
 
         
         a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
+        m= driver.find_element_by_xpath('//*[@id="ctl00_Image3"]')
         a.move_to_element(m).perform() 
         time.sleep(1)       
-
+        
 
         a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]')
+        m= driver.find_element_by_xpath('//*[@id="ctl00_btnSignout"]')
         a.move_to_element(m).perform()
         
         time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]').click() 
-        time.sleep(10) #log out step   
+        driver.find_element_by_xpath('//*[@id="ctl00_btnSignout"]').click() 
+        time.sleep(5) #log out step   
 
 
 
