@@ -596,6 +596,10 @@ class Instagram(unittest.TestCase):
 
             # Fixing error 
             element.click()
+            time.sleep(1)
+
+            element1 =driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnKbtnUpdateCopies"]')
+            element1.click()
 
         except NoSuchElementException:
             

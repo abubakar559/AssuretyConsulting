@@ -91,7 +91,7 @@ class Instagram(unittest.TestCase):
        
        
        
-        #Second Task done proceding to the third task 
+        #Second Task done proceding to the third task MPA Crid of owner  
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
         time.sleep(5) #Add button 
@@ -112,7 +112,7 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
         time.sleep(5)        
 
-        #third task done starting forth task 
+        #third task done starting forth task MPA Cried of preparer
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
         time.sleep(5) #Add button 
@@ -136,7 +136,7 @@ class Instagram(unittest.TestCase):
         time.sleep(5)   
         
              
-        #forth task done, starting fifth task 
+        #forth task done, starting fifth task MPA Permit Number
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
         time.sleep(5) #Add button 
@@ -161,7 +161,7 @@ class Instagram(unittest.TestCase):
         time.sleep(5)  
 
 
-        #fifth task done, Sixth task starting Permit ZIP +4
+        #fifth task done, Sixth task starting MPA Permit ZIP +4
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
         time.sleep(5) #Add button 
