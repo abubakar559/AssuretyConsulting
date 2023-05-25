@@ -71,7 +71,7 @@ class Instagram(unittest.TestCase):
                 break
             elif status == 'Failed':
                 print('Failed because failed to upload file') 
-                driver.quit()       
+                driver.quit()  #if status failed then quit the automation      
     # if the status isn't 'Passed', refresh the page and wait for a bit before checking again
             driver.refresh()
             time.sleep(5)
@@ -644,6 +644,8 @@ class Instagram(unittest.TestCase):
         time.sleep(2)
 
         # Generate Postage done, next is copy job 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_ImgUnlockJobs"]').click()
+        time.sleep(3)
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane6_header"]').click()
         time.sleep(2) #left menu to More     
@@ -653,10 +655,26 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnkbtnCreateACopy"]').click()
         time.sleep(5)
 
+        #Export Mail.dat
 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_header"]').click()
+        time.sleep(2) #Selecting export
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_content_lbExportJob"]').click()
+        time.sleep(2) #Selecting Mail dat 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnExport"]').click()
+        time.sleep(2)
+
+        print("***************************************")
+        print("***************************************")
+        print("Smoke Test successfully done rest is logout, Not important")
+        print("***************************************")
+        print("***************************************")
+
+
+        #//*[@id="ctl00_Image3"]  //*[@id="ctl00_Image3"] //*[@id="ctl00_PopupMenu"] //*[@id="ctl00_ctl00_Image3"]
 
         a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_Image3"]')
+        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
         a.move_to_element(m).perform() 
         time.sleep(1)       
         

@@ -51,9 +51,7 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lnkBtnApply"]').click()
         time.sleep(2)
 
-
-
-
+        
         
         a = ActionChains(driver)
         m= driver.find_element_by_xpath('//*[@id="ctl00_Image3"]')
