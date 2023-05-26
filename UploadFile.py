@@ -671,7 +671,7 @@ class Instagram(unittest.TestCase):
         print("***************************************")
 
 
-        #//*[@id="ctl00_Image3"]  //*[@id="ctl00_Image3"] //*[@id="ctl00_PopupMenu"] //*[@id="ctl00_ctl00_Image3"]
+        #//*[@id="ctl00_Image3"]  //*[@id="ctl00_Image3"]  //*[@id="ctl00_ctl00_Image3"]
 
         a = ActionChains(driver)
         m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')

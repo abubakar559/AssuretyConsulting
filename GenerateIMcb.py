@@ -43,7 +43,7 @@ class Instagram(unittest.TestCase):
 
 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_gdvwJobs_ctl05_lblhdrJobNameTitleAndIssue"]').click()
+        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_gdvwJobs_ctl02_lblhdrJobNameTitleAndIssue"]').click()
         time.sleep(5)
         #selecting first job 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane4_header"]').click()
@@ -66,8 +66,20 @@ class Instagram(unittest.TestCase):
         time.sleep(2) #Resequence Barcode 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_BarcodeTabContainer_IMtbTabPanel_ctl02_lnkBtnReSequence"]').click()
         time.sleep(3) #button submission 
-        
 
+
+        #Third tab resequence IMB
+        
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_BarcodeTabContainer_IMbTabPanel_IMbPanel"]').click()
+        time.sleep(5) #selecting thrid tab
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_BarcodeTabContainer_IMbTabPanel_ctl02_lbSelectAllMailPieces"]').click()
+        time.sleep(2) #select all
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_BarcodeTabContainer_IMbTabPanel_ctl02_lbResequenceBarcode"]').click()
+        time.sleep(2) #resequence options
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_BarcodeTabContainer_IMbTabPanel_ctl02_lnkBtnReSequence"]').click()
+        time.sleep(5) #final btn 
+
+        
         # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
         # time.sleep(5) #close modify drop down menu
         # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_header"]').click()
