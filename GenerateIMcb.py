@@ -90,7 +90,7 @@ class Instagram(unittest.TestCase):
 
         
         a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_Image3"]')
+        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
         a.move_to_element(m).perform() 
         time.sleep(1)       
         
