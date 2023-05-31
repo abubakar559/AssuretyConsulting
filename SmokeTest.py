@@ -21,7 +21,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://aims.assuretyconsulting.com/AIMSPlus/Default.aspx')
+        self.driver.get('http://10.51.100.26/AIMSQA/Default.aspx')
         self.driver.maximize_window()
 
     def login(self):
@@ -33,10 +33,10 @@ class Instagram(unittest.TestCase):
         driver=self.driver
 
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("administrator")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("abcd1234")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("Abubakar123")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_lbLogin"]').click()
         time.sleep(10)
@@ -50,7 +50,7 @@ class Instagram(unittest.TestCase):
        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_flUpdJob"]').click()
 
         time.sleep(4) #waiting for window popup to open
-        pyautogui.write(r"C:\Users\RockY\Downloads\Bundel on Pallet-Presort-STD-FLT.zip") #path of File
+        pyautogui.write(r"C:\Users\RockY\Downloads\STD-FLT- Bundle on Pallet.zip") #path of File
         pyautogui.press('enter')
         time.sleep(5)        
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ImgBtnSave"]').click()
@@ -92,7 +92,7 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').click()
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').send_keys(Keys.CONTROL,'a')
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').send_keys(Keys.BACKSPACE)
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').send_keys("STDFLTS Bundle")
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').send_keys("STDFLTS BundleOnPallet")
         time.sleep(2) 
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_btnSave"]').click()
@@ -671,7 +671,7 @@ class Instagram(unittest.TestCase):
         print("***************************************")
 
 
-        #//*[@id="ctl00_Image3"]  //*[@id="ctl00_Image3"]  //*[@id="ctl00_ctl00_Image3"]
+        #//*[@id="ctl00_Image3"]  //*[@id="ctl00_Image3"]  //*[@id="ctl00_ctl00_Image3"] //*[@id="ctl00_ctl00_btnSignout"]
 
         a = ActionChains(driver)
         m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
@@ -680,11 +680,11 @@ class Instagram(unittest.TestCase):
         
 
         a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_btnSignout"]')
+        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]')
         a.move_to_element(m).perform()
         
         time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="ctl00_btnSignout"]').click() 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]').click() 
         time.sleep(5) #log out step   
 
 
