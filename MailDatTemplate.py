@@ -41,15 +41,17 @@ class Instagram(unittest.TestCase):
         time.sleep(10)
         #login steps till now 
 
-        # Selecting Mail Dat template 
+
+        #Create and apply Template to job
+         
         driver.find_element_by_xpath('//*[@id="lblMaildatTemplate"]').click()
         time.sleep(2)
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
         time.sleep(5) #Add button 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationHDR")
+        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMyTemplate")
         time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for hdr")
+        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for local Template")
         time.sleep(2) #Template Description 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
@@ -62,19 +64,13 @@ class Instagram(unittest.TestCase):
         time.sleep(2)
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)
+
         
 
         #adding seg eDoc
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationSEGeDoc")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for SEGeDoc")
-        time.sleep(2) #Template Description 
+
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
 
@@ -86,20 +82,13 @@ class Instagram(unittest.TestCase):
         time.sleep(2)
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)        
        
-       
+             
        
         #Second Task done proceding to the third task MPA Crid of owner  
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
+        
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPACriedofMailOwner")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA CRID of mail owner")
-        time.sleep(2) #Template Description 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
 
@@ -109,18 +98,11 @@ class Instagram(unittest.TestCase):
         time.sleep(2)
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)        
-
+        
         #third task done starting forth task MPA Cried of preparer
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPACriedofPreparer")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA CRID of Preparer")
-        time.sleep(2) #Template Description 
+ 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
         
@@ -132,19 +114,12 @@ class Instagram(unittest.TestCase):
         time.sleep(2)
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)   
         
              
         #forth task done, starting fifth task MPA Permit Number
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPApermitnumber")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Permit Number")
-        time.sleep(2) #Template Description 
+
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
         
@@ -157,19 +132,12 @@ class Instagram(unittest.TestCase):
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)  
 
 
         #fifth task done, Sixth task starting MPA Permit ZIP +4
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPApermitZip+4")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Permit ZIP +4")
-        time.sleep(2) #Template Description 
+
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
         
@@ -183,19 +151,12 @@ class Instagram(unittest.TestCase):
         
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)  
 
 
         #ZIP+4 done proceding to Mailer ID of Mail owner 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
-
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPAmailIDofMailOwner")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Mailer ID of Mail Owner")
-        time.sleep(2) #Template Description 
+    
+ 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
         
@@ -208,18 +169,11 @@ class Instagram(unittest.TestCase):
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)  
-
+    
         #Mailer ID of mail owner done next Mailer ID of mail preparer
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
+    
 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPAmailIDofMailPreparer")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Mailer ID of Mail Preparer")
-        time.sleep(2) #Template Description 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
         
@@ -232,18 +186,11 @@ class Instagram(unittest.TestCase):
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)  
+    
+        #MPA Mailer ID of Mail Preparer done, next is CPT Mailer ID of Mail Owner Final step 
 
-        #MPA Mailer ID of Mail Preparer done, next is CPT Mailer ID of Mail Owner 
-
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
-        time.sleep(5) #Add button 
-
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationCPTmailerIDofMailOwner")
-        time.sleep(2) #Template Name    
-        driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for CPT Mailer ID of Mail Owner")
-        time.sleep(2) #Template Description 
+        
+ 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
         time.sleep(2) #Radio button 
 
@@ -257,7 +204,238 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
         time.sleep(3) #Add Field 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
-        time.sleep(5)  
+        time.sleep(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # # Selecting Mail Dat template 
+        # driver.find_element_by_xpath('//*[@id="lblMaildatTemplate"]').click()
+        # time.sleep(2)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationHDR")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for hdr")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[2]').click()
+        # time.sleep(4) #first hdr 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[3]').click()
+        # time.sleep(4)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("5092424")
+        # time.sleep(2)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)
+        
+
+        # #adding seg eDoc
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationSEGeDoc")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for SEGeDoc")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[3]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[10]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("5092424")
+        # time.sleep(2)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)        
+       
+       
+       
+        # #Second Task done proceding to the third task MPA Crid of owner  
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPACriedofMailOwner")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA CRID of mail owner")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[5]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("5092424")
+        # time.sleep(2)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)        
+
+        # #third task done starting forth task MPA Cried of preparer
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPACriedofPreparer")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA CRID of Preparer")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+        
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[5]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[2]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("5092424")
+        # time.sleep(2)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)   
+        
+             
+        # #forth task done, starting fifth task MPA Permit Number
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPApermitnumber")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Permit Number")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+        
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[5]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[12]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("65")
+        # time.sleep(2)
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)  
+
+
+        # #fifth task done, Sixth task starting MPA Permit ZIP +4
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPApermitZip+4")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Permit ZIP +4")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+        
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[5]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[13]').click()
+        # time.sleep(3)
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("201911535")
+        # time.sleep(2)
+        
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)  
+
+
+        # #ZIP+4 done proceding to Mailer ID of Mail owner 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPAmailIDofMailOwner")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Mailer ID of Mail Owner")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+        
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[5]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[7]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("106848")
+
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)  
+
+        # #Mailer ID of mail owner done next Mailer ID of mail preparer
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationMPAmailIDofMailPreparer")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for MPA Mailer ID of Mail Preparer")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+        
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[5]').click()
+        # time.sleep(3)  
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[8]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("106848") 
+        # time.sleep(2)     
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)  
+
+        # #MPA Mailer ID of Mail Preparer done, next is CPT Mailer ID of Mail Owner 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_LKBNewTemplate"]').click()
+        # time.sleep(5) #Add button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateName"]').send_keys("AutomationCPTmailerIDofMailOwner")
+        # time.sleep(2) #Template Name    
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_txtTemplateDescription"]').send_keys("This task is being automated for CPT Mailer ID of Mail Owner")
+        # time.sleep(2) #Template Description 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_cblstVersions_2"]').click()
+        # time.sleep(2) #Radio button 
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFile"]/option[6]').click()
+        # time.sleep(3)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_ddlMailDatFields"]/option[23]').click()
+        # time.sleep(3)
+
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_tbMailDatFieldValue"]').send_keys("106848")
+        # time.sleep(2)
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbtnAddMailDatField"]').click()
+        # time.sleep(3) #Add Field 
+        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lbSaveTemplate"]').click()
+        # time.sleep(5)  
 
 
 
