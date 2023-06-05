@@ -102,9 +102,9 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').send_keys(Keys.CONTROL,'a')
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').send_keys(Keys.BACKSPACE)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').send_keys("Cont.Mail Test")
-        time.sleep(2) 
+        time.sleep(2) #Header Info
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_btnSave"]').click()
-        time.sleep(3)
+        time.sleep(3) #Save
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
         time.sleep(2)
 
@@ -209,13 +209,13 @@ class Instagram(unittest.TestCase):
 
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_grdvwSelectedContainers_ctl01_chkbxSelectAllContainers"]').click()
-        time.sleep(2)
+        time.sleep(2) #Check box selection 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_grdvwSelectedContainers_ctl01_chkbxSelectAllContainers"]').click()
-        time.sleep(2)
+        time.sleep(2) #Check box selection
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_grdvwSelectedContainers_ctl01_chkbxSelectAllContainers"]').click()
-        time.sleep(2)
+        time.sleep(2) #Check box selection
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_grdvwSelectedContainers_ctl01_chkbxSelectAllContainers"]').click()
-        time.sleep(2)        
+        time.sleep(2) #Check box selection        
         
 
 
@@ -263,10 +263,10 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlTransactionType"]/option[2]').click()
         time.sleep(1)  
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnkBtnSend"]').click()
-        time.sleep(2)
+        time.sleep(2) #export
 
         driver.find_element_by_xpath('//*[@id="lblPODashboard"]').click()
-        time.sleep(5)
+        time.sleep(5) #DashBoard 
 
 
 
