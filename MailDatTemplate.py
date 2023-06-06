@@ -20,7 +20,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://aims.assuretyconsulting.com/AIMSPlus/Default.aspx')
+        self.driver.get('http://10.51.100.26/AIMSQA/Default.aspx')
         self.driver.maximize_window()
 
     def login(self):
@@ -32,10 +32,10 @@ class Instagram(unittest.TestCase):
         driver=self.driver
 
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("administrator")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("abcd1234")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("Abubakar123")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_lbLogin"]').click()
         time.sleep(10)
