@@ -207,13 +207,21 @@ class Instagram(unittest.TestCase):
         time.sleep(5)
 
 
+        
+        
+        a = ActionChains(driver)
+        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_Image3"]')
+        a.move_to_element(m).perform() 
+        time.sleep(1)       
+        
 
-
-
-
-
-
-
+        a = ActionChains(driver)
+        m= driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]')
+        a.move_to_element(m).perform()
+        
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_btnSignout"]').click() 
+        time.sleep(5) #log out step   
 
 
 
@@ -445,23 +453,11 @@ class Instagram(unittest.TestCase):
         # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_header"]').click()
         # time.sleep(5) #open export menu drop down 
         # driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane5_content_trPostalOneExport"]/td').click()
-        # time.sleep(10) #selecting Postal One! 
+        # time.sleep(10) #selecting Postal One!
 
-        
-        
-        a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_Image3"]')
-        a.move_to_element(m).perform() 
-        time.sleep(1)       
-        
 
-        a = ActionChains(driver)
-        m= driver.find_element_by_xpath('//*[@id="ctl00_btnSignout"]')
-        a.move_to_element(m).perform()
-        
-        time.sleep(2)
-        driver.find_element_by_xpath('//*[@id="ctl00_btnSignout"]').click() 
-        time.sleep(5) #log out step   
+
+
 
 
 
