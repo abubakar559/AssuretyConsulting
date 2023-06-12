@@ -21,7 +21,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://10.51.100.26/AIMSQA/Default.aspx')
+        self.driver.get('http://10.51.100.26/AIMSPlus79/')
         self.driver.maximize_window()
 
     def login(self):
@@ -123,24 +123,98 @@ class Instagram(unittest.TestCase):
             if status == 'Application Error':
                 
                 
-                print('*******Crash************')
-                print('*******Crash************')
-                print('*******Crash************')
-                print('*******Crash************')
-                print('*******Crash************')
+                print('*******Crash on siblings Label************')
+                print('*******Crash on siblings Label************')
+                print('*******Crash on siblings Label************')
+                print('*******Crash on siblings Label************')
+                print('*******Crash on siblings Label************')
+                print('*******Crash on siblings Label************')
                 
                 driver.find_element_by_xpath('//*[@id="hypGoBack"]').click()
                 time.sleep(3)
                 driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_content_lnkBtnManageCSM"]').click()
                 time.sleep(2)
+
+                
+
+
             
         except NoSuchElementException:
             
-            print("No Crash")
-            print("No Crash")
-            print("No Crash")
+            print("No Crash on siblings Label")
+            print("No Crash on siblings Label")
+            print("No Crash on siblings Label")
 
 
+        #Unpalletization Sibling Crash Test
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_cbPallets"]').click()
+        time.sleep(2) #uncheck Pallets
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_cbIncludeLooseTrays"]').click()
+        time.sleep(2) #uncheck Loose trays
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_cbSiblings"]').click()
+        time.sleep(2) #Check sibilings
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_gdvwCSM_ctl02_chkCheck_freezeitem"]').click()
+        time.sleep(2) #selecting first job 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbUnpalletizeTrays"]').click()
+        time.sleep(3)
+
+        try:
+
+            status_element = driver.find_element_by_xpath('//*[@id="lblAppError"]')
+    
+            # get the text of the status element
+            status = status_element.text
+    
+            # check if the status is 'Passed'
+            if status == 'Application Error':
+                
+                
+                print('*******Crash on siblings Unpalletization************')
+                print('*******Crash on siblings Unpalletization************')
+                print('*******Crash on siblings Unpalletization************')
+                print('*******Crash on siblings Unpalletization************')
+                print('*******Crash on siblings Unpalletization************')
+                print('*******Crash on siblings Unpalletization************')
+
+
+
+
+                driver.find_element_by_xpath('//*[@id="hypGoBack"]').click()
+                time.sleep(3)
+                driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_content_lnkBtnManageCSM"]').click()
+                time.sleep(2)
+
+                
+
+
+            
+        except NoSuchElementException:
+            
+            print("No Crash on siblings Unpalletization")
+            print("No Crash on siblings Unpalletization")
+            print("No Crash on siblings Unpalletization")
+
+
+
+        #Seamless Acceptance Validation Crash Testing
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
+        time.sleep(2)#not for the smoke test only for this script 
+
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccPaneSeamlessAcceptance_header"]').click()
+        time.sleep(2) #Seamless Acceptance 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccPaneSeamlessAcceptance_content_lnkBtnSeamlessAcceptanceValidation"]').click()
+        time.sleep(2) #Validation
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnkbtnReValidate"]').click
+        time.sleep(2) #Re-validate btn
+        
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane2_header"]').click()
+        time.sleep(2) #change of menu (Validations) 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane2_content_lbValidationSummary"]').click()
+        time.sleep(2) #Job Validation 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_chkSeamlessValidation"]').click()
+        time.sleep(2) #check box selection 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbValidate"]').click()
+        time.sleep(2)  
 
 
 
