@@ -20,7 +20,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://10.51.100.26/AIMSPlus79/')
+        self.driver.get('http://10.51.100.137/AIMSPlus/Default.aspx')
         self.driver.maximize_window()
 
     def login(self):
@@ -32,7 +32,7 @@ class Instagram(unittest.TestCase):
         driver=self.driver
         
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar123")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').click()
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("Abubakar123")
@@ -88,14 +88,14 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lnkbtnApplyTemplate"]').click()
         time.sleep(5)
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_lnkBtnApply"]').click()
-        time.sleep(2)        
+        time.sleep(3)        
 
         driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_gdvwJobs_ctl02_lblhdrJobNameTitleAndIssue"]').click()
         time.sleep(3)#job Selection
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_header"]').click()
         time.sleep(2)#modify
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane3_content_lnkBtnHdrEdit"]').click()
-        time.sleep(2)
+        time.sleep(3)
         
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtJobNameTitleandIssue"]').click()
@@ -141,13 +141,13 @@ class Instagram(unittest.TestCase):
         time.sleep(5) #selecting continuous mailing
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbSelectionRanges"]').click()
-        time.sleep(2) #selecting range
+        time.sleep(5) #selecting range //*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtcsmIDStartRangeSelection"]
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtcsmIDStartRangeSelection"]').send_keys("000001")
-        time.sleep(2) #range 1
+        time.sleep(2) #range 1 time
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtcsmIDEndRangeSelection"]').send_keys("000004")
         time.sleep(2) #range 2
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbAddRangeSelection"]').click()
-        time.sleep(2) #add range btn 
+        time.sleep(5) #add range btn 
 
         
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtcsmIDStartRangeSelection"]').send_keys("000007")
@@ -155,11 +155,11 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtcsmIDEndRangeSelection"]').send_keys("000015")
         time.sleep(2) #range 2
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbAddRangeSelection"]').click()
-        time.sleep(2) #add range btn 
+        time.sleep(5) #add range btn 
 
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbRangeSelectionOk"]').click()
-        time.sleep(2) #ok btn
+        time.sleep(5) #ok btn  time change
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lbEdit"]').click()
         time.sleep(5) #Edit
 
