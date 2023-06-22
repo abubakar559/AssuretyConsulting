@@ -21,7 +21,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://10.51.100.26/AIMSPlus79/')
+        self.driver.get('http://10.51.100.137/AIMSPlus/Default.aspx')
         self.driver.maximize_window()
 
     def login(self):
@@ -33,7 +33,7 @@ class Instagram(unittest.TestCase):
         driver=self.driver
 
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar123")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').click()
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("Abubakar123")
@@ -204,7 +204,7 @@ class Instagram(unittest.TestCase):
         time.sleep(2) #Seamless Acceptance 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccPaneSeamlessAcceptance_content_lnkBtnSeamlessAcceptanceValidation"]').click()
         time.sleep(2) #Validation
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnkbtnReValidate"]').click
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_lnkbtnReValidate"]').click()
         time.sleep(2) #Re-validate btn
         
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuJobDetail1_AccordionPane2_header"]').click()
