@@ -44,8 +44,8 @@ class Instagram(unittest.TestCase):
 
 
 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_imgConfig"]').click() 
-        time.sleep(2) #settings 
+        driver.find_element_by_xpath('//*[@id="ctl00_imgConfig"]').click() 
+        time.sleep(3) #settings 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuSettings_AccordionPane1_content_lbManageBranch"]').click()
         time.sleep(2)   #Manage Branches 
 
@@ -54,20 +54,20 @@ class Instagram(unittest.TestCase):
         time.sleep(5) #plus add home 
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtBranchName"]').send_keys("Abubakar")
-        time.sleep(2) #branch Name
+        time.sleep(1) #branch Name
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtUserLicenseCode"]').send_keys("AB12")
-        time.sleep(2)#user licence code
+        time.sleep(1)#user licence code
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtSchedulerCorpID"]').send_keys("123456789962")
-        time.sleep(2)#Scheduler Corp ID
+        time.sleep(1)#Scheduler Corp ID
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtSchedulerID"]').send_keys("12345")
-        time.sleep(2)#Scheduler ID
+        time.sleep(1)#Scheduler ID
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtCrid"]').send_keys("5092424")
-        time.sleep(2)#CRID
+        time.sleep(1)#CRID
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_tbPOUserName"]').send_keys("Abubakar123")
-        time.sleep(2)#PostalOne!® User Name
+        time.sleep(1)#PostalOne!® User Name
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_tbPOPassword"]').send_keys("Abubakar123")
-        time.sleep(2)#PostalOne!® Password:
+        time.sleep(1)#PostalOne!® Password:
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnAddMID"]').click()
         time.sleep(5)#Add Mid
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtmidMID"]').send_keys("106848")
@@ -84,20 +84,20 @@ class Instagram(unittest.TestCase):
         time.sleep(5) #plus add home 
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtBranchName"]').send_keys("Ashhar")
-        time.sleep(2) #branch Name
+        time.sleep(1) #branch Name
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtUserLicenseCode"]').send_keys("AW10")
-        time.sleep(2)#user licence code
+        time.sleep(1)#user licence code
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtSchedulerCorpID"]').send_keys("12589")
-        time.sleep(2)#Scheduler Corp ID
+        time.sleep(1)#Scheduler Corp ID
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtSchedulerID"]').send_keys("1995")
-        time.sleep(2)#Scheduler ID
+        time.sleep(1)#Scheduler ID
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtCrid"]').send_keys("96325874")
-        time.sleep(2)#CRID
+        time.sleep(1)#CRID
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_tbPOUserName"]').send_keys("Ashhar123")
-        time.sleep(2)#PostalOne!® User Name
+        time.sleep(1)#PostalOne!® User Name
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_tbPOPassword"]').send_keys("Ashhar123")
-        time.sleep(2)#PostalOne!® Password:
+        time.sleep(1)#PostalOne!® Password:
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnAddMID"]').click()
         time.sleep(5)#Add Mid
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtmidMID"]').send_keys("199507")
@@ -113,20 +113,20 @@ class Instagram(unittest.TestCase):
         time.sleep(5) #plus add home 
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtBranchName"]').send_keys("KAM")
-        time.sleep(2) #branch Name
+        time.sleep(1) #branch Name
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtUserLicenseCode"]').send_keys("KAM1")
-        time.sleep(2)#user licence code
+        time.sleep(1)#user licence code
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtSchedulerCorpID"]').send_keys("125899")
-        time.sleep(2)#Scheduler Corp ID
+        time.sleep(1)#Scheduler Corp ID
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtSchedulerID"]').send_keys("12549")
-        time.sleep(2)#Scheduler ID
+        time.sleep(1)#Scheduler ID
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtCrid"]').send_keys("258741")
-        time.sleep(2)#CRID
+        time.sleep(1)#CRID
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_tbPOUserName"]').send_keys("kamal123")
-        time.sleep(2)#PostalOne!® User Name
+        time.sleep(1)#PostalOne!® User Name
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_tbPOPassword"]').send_keys("kamal123")
-        time.sleep(2)#PostalOne!® Password:
+        time.sleep(1)#PostalOne!® Password:
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnAddMID"]').click()
         time.sleep(5)#Add Mid
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtmidMID"]').send_keys("564759")
@@ -135,10 +135,6 @@ class Instagram(unittest.TestCase):
         time.sleep(3) #Mid Save BTN
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnSave"]').click()
         time.sleep(5) #save btn 
-
-
-
-
 
 
 
