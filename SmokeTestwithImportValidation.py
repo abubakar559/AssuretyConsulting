@@ -21,7 +21,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://10.51.100.137/AIMSPlus/Default.aspx')
+        self.driver.get('http://10.51.100.26/AIMSPlus80/')
         self.driver.maximize_window()
 
     def login(self):
@@ -80,7 +80,7 @@ class Instagram(unittest.TestCase):
        # driver.find_element_by_xpath('//*[@id="ctl00_masterContentPlaceHolder_flUpdJob"]').click()
 
         time.sleep(4) #waiting for window popup to open
-        pyautogui.write(r"C:\Users\RockY\Downloads\STD-FLT- Bundle on Pallet.zip") #path of File
+        pyautogui.write(r"C:\Users\abubakar.ijaz\Downloads\STD-FLT- Bundle on Pallet.zip") #path of File
         #pyautogui.write(r"C:\Users\RockY\Downloads\1 (2).zip")
         pyautogui.press('enter')
         time.sleep(5)        
