@@ -21,7 +21,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://10.51.100.137/AIMSPlus/Default.aspx')
+        self.driver.get('http://10.51.100.26/AIMSPlusCorefact/')
         self.driver.maximize_window()
 
     def login(self):
@@ -33,10 +33,10 @@ class Instagram(unittest.TestCase):
         driver=self.driver
 
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar123")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("administrator")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("Abubakar123")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("abcd1234")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_lbLogin"]').click()
         time.sleep(10)
@@ -53,13 +53,13 @@ class Instagram(unittest.TestCase):
 
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtUserName"]').send_keys("Abubakar123")
         time.sleep(1) #UserID
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtPassword"]').send_keys("")
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtPassword"]').send_keys("Abubakar123")
         time.sleep(1)#Password 
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtConfirmPassword"]').send_keys("")
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtConfirmPassword"]').send_keys("Abubakar123")
         time.sleep(1)#Confirm Password
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtFirstName"]').send_keys("")
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtFirstName"]').send_keys("Abubakar")
         time.sleep(1) #FirstName
-        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtLastName"]').send_keys("")
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtLastName"]').send_keys("Ijaz")
         time.sleep(1) #LastName            
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlUserRole"]').click()
         time.sleep(2)
@@ -73,6 +73,71 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlSelectedBranches"]/option[3]').click()
         time.sleep(2)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnSave"]').click()
+        time.sleep(3) #saveBtn
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuSettings_AccordionPane1_content_lbManageUser"]').click()
+        time.sleep(5)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnAdd"]').click()
+        time.sleep(2) #add users 
+        
+
+        #Adding Second users 
+
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtUserName"]').send_keys("Ashhar123")
+        time.sleep(1) #UserID
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtPassword"]').send_keys("Ashhar123")
+        time.sleep(1)#Password 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtConfirmPassword"]').send_keys("Ashhar123")
+        time.sleep(1)#Confirm Password
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtFirstName"]').send_keys("Ashhar")
+        time.sleep(1) #FirstName
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtLastName"]').send_keys("Husain")
+        time.sleep(1) #LastName            
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlUserRole"]').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlUserRole"]/option[2]').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_cbBranchesSelectAll"]').click()
+        time.sleep(2)
+
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlSelectedBranches"]').click()
+        time.sleep(2)#selecting branch 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlSelectedBranches"]/option[3]').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnSave"]').click()
+        time.sleep(3) #saveBtn
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuSettings_AccordionPane1_content_lbManageUser"]').click()
+        time.sleep(5)
+
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnAdd"]').click()
+        time.sleep(2) #add users 
+
+
+        #Adding thrid user
+
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtUserName"]').send_keys("kamal123")
+        time.sleep(1) #UserID
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtPassword"]').send_keys("kamal123")
+        time.sleep(1)#Password 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtConfirmPassword"]').send_keys("kamal123")
+        time.sleep(1)#Confirm Password
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtFirstName"]').send_keys("kamal")
+        time.sleep(1) #FirstName
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_txtLastName"]').send_keys("khan")
+        time.sleep(1) #LastName            
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlUserRole"]').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlUserRole"]/option[2]').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_cbBranchesSelectAll"]').click()
+        time.sleep(2)
+
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlSelectedBranches"]').click()
+        time.sleep(2)#selecting branch 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ddlSelectedBranches"]/option[3]').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnSave"]').click()
+        time.sleep(5) #saveBtn
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuSettings_AccordionPane1_content_lbManageUser"]').click()
         time.sleep(5)
 
 

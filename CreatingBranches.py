@@ -21,7 +21,7 @@ class Instagram(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-        self.driver.get('http://10.51.100.137/AIMSPlus/Default.aspx')
+        self.driver.get('http://10.51.100.26/AIMSPlusCorefact/')
         self.driver.maximize_window()
 
     def login(self):
@@ -33,10 +33,10 @@ class Instagram(unittest.TestCase):
         driver=self.driver
 
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("Abubakar123")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtUserID"]').send_keys("administrator")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').click()
-        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("Abubakar123")
+        driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtPassword"]').send_keys("abcd1234")
         time.sleep(1)
         driver.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_lbLogin"]').click()
         time.sleep(10)
@@ -76,7 +76,8 @@ class Instagram(unittest.TestCase):
         time.sleep(3)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnSave"]').click()
         time.sleep(5) #save btn 
-
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuSettings_AccordionPane1_content_lbManageBranch"]').click()
+        time.sleep(3)
 
 
         #this step required 1 
@@ -106,6 +107,10 @@ class Instagram(unittest.TestCase):
         time.sleep(3)
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnSave"]').click()
         time.sleep(5) #save btn 
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuSettings_AccordionPane1_content_lbManageBranch"]').click()
+        time.sleep(3)
+
+
 
 
         #this step required 2 
@@ -136,7 +141,8 @@ class Instagram(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_masterContentPlaceHolder_ImgBtnSave"]').click()
         time.sleep(5) #save btn 
 
-
+        driver.find_element_by_xpath('//*[@id="ctl00_ctl00_masterContentPlaceHolder_LeftMenuSettings_AccordionPane1_content_lbManageBranch"]').click()
+        time.sleep(3)
 
 
 
